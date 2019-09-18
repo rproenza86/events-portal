@@ -1,4 +1,4 @@
 export enum NotificationStrategy {
-  REDUX,
-  CALLBACK
+  REDUX = 'Redux',
+  CALLBACK = 'Callback'
 }
