@@ -10,7 +10,7 @@ export interface EventFoundationConstructorParams {
  * @class
  */
 export class EventFoundation {
-  private event: CustomEvent;
+  private readonly event: CustomEvent;
 
   /**
    * Creates a Custom Event.
@@ -51,7 +51,7 @@ export class EventFoundation {
    * Get the custom event object.
    * @return {CustomEvent} The custom event object.
    */
-  getEvent(): CustomEvent {
+  public getEvent(): CustomEvent {
     return this.event;
   }
 }

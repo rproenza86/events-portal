@@ -4,6 +4,7 @@ import {
   EventFoundationConstructorParams
 } from './EventFoundation';
 
+// tslint:disable-next-line: no-let
 let event: EventFoundation;
 
 test.before(() => {
@@ -49,7 +50,10 @@ test('Should return the event object', t => {
 
 test('Should throws error when missing the "eventType" param', t => {
   const error = t.throws(() => {
-    new EventFoundation({} as EventFoundationConstructorParams);
+    // tslint:disable-next-line: no-object-literal-type-assertion
+    const emptyObject = {} as EventFoundationConstructorParams;
+    const testThrow = new EventFoundation(emptyObject);
+    return testThrow;
   }, Error);
 
   t.is(

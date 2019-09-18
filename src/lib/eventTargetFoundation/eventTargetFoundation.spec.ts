@@ -16,6 +16,7 @@ const params: EventFoundationConstructorParams = {
 };
 const event: EventFoundation = new EventFoundation(params);
 
+// tslint:disable: no-let no-object-literal-type-assertion
 let eventTarget: EventTargetFoundation;
 
 test.before(() => {
@@ -39,7 +40,7 @@ test('Should publish event properly', t => {
 
 test('Should unsubscribe event properly', t => {
   let eventPublished = {} as CustomEvent;
-  function eventSubscriptionHandler(e: CustomEvent) {
+  function eventSubscriptionHandler(e: CustomEvent): void {
     eventPublished = e;
   }
 
