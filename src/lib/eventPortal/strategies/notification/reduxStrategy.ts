@@ -27,9 +27,10 @@ export class ReduxStrategy extends NotificationStrategyFoundation {
    *
    * @param {CustomEvent} event - Published event to send to the listener
    */
-  public onNotification(event: CustomEvent): void {
+  // Declarative expression needed to allow function execution as callback avoiding scoping problems
+  public onNotification = (event: CustomEvent): void => {
     this.callBack(this.createAction(event));
-  }
+  };
 
   /**
    * Method that return the event strategy name.
