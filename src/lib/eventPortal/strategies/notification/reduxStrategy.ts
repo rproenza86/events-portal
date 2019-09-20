@@ -9,7 +9,7 @@ import { NotificationStrategyFoundation } from './notificationStrategyFoundation
  *
  * Ex: Given an event publication the listener will be notified via
  * ```js
- *    dispatch(eventData);
+ *    listenerStore.dispatch(eventData);
  * ```
  */
 export class ReduxStrategy extends NotificationStrategyFoundation {
