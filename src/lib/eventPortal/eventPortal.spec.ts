@@ -1,6 +1,5 @@
 import test from 'ava';
 
-// import { NotificationStrategy } from '../constants';
 import { NotificationStrategy } from '../constants';
 import {
   EventFoundation,
@@ -16,8 +15,6 @@ let dispatchedAction: any;
 let eventPortal: EventPortal;
 const mockStore: any = {
   dispatch: (action: any) => {
-    // tslint:disable-next-line: no-console
-    console.log(action);
     dispatchedAction = action;
   }
 };
