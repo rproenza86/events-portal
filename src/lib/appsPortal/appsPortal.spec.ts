@@ -1,11 +1,8 @@
 import test from 'ava';
 
 import { AppEventPortal } from '../appEventPortal/AppEventPortal';
-import {
-  // EventFoundation,
-  EventFoundationConstructorParams
-} from '../eventFoundation/EventFoundation';
-import { ReduxStrategy } from '../strategies/notification/reduxStrategy';
+import { NotificationStrategy } from '../constants';
+import { EventFoundationConstructorParams } from '../eventFoundation/EventFoundation';
 import { AppsPortal } from './AppsPortal';
 
 // tslint:disable: no-let
@@ -14,21 +11,12 @@ let appsPortal: AppsPortal;
 const appNameA = 'SuperMicroUI';
 const appNameB = 'SuperMicroFrontend';
 
-// const params1: EventFoundationConstructorParams = {
-//   eventPayload: {
-//     price: 867
-//   },
-//   eventType: 'TEST1_EVENT_PORTAL-SuperMicroUI'
-// };
-// const event1 = new EventFoundation(params1);
-
 const params2: EventFoundationConstructorParams = {
   eventPayload: {
     price: 563
   },
   eventType: 'TEST2_EVENT_PORTAL-SuperMicroFrontend'
 };
-// const event2 = new EventFoundation(params2);
 
 let dispatchedAction: any;
 const mockStore: any = {
@@ -40,14 +28,22 @@ const mockStore: any = {
 let appAEventPortal: AppEventPortal;
 let appBEventPortal: AppEventPortal;
 
-let reduxStrategy: ReduxStrategy;
+const registrationObjectAppA = {
+  appName: appNameA,
+  callBack: mockStore,
+  feedbackType: NotificationStrategy.REDUX
+};
+const registrationObjectAppB = {
+  appName: appNameB,
+  callBack: mockStore,
+  feedbackType: NotificationStrategy.REDUX
+};
 
 test.before(() => {
-  reduxStrategy = new ReduxStrategy(mockStore);
   appsPortal = new AppsPortal();
 
-  appAEventPortal = appsPortal.registerApp(appNameA, reduxStrategy);
-  appBEventPortal = appsPortal.registerApp(appNameB, reduxStrategy);
+  appAEventPortal = appsPortal.registerApp(registrationObjectAppA);
+  appBEventPortal = appsPortal.registerApp(registrationObjectAppB);
 });
 
 // tests
@@ -105,8 +101,7 @@ test('Should not have logged the appNameA published events', t => {
 
 test('Should not register the same app twice', t => {
   const appASingletonEventPortal = appsPortal.registerApp(
-    appNameA,
-    reduxStrategy
+    registrationObjectAppA
   );
   t.is(appAEventPortal === appASingletonEventPortal, true);
 });
