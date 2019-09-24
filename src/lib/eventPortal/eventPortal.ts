@@ -12,11 +12,11 @@ export class EventPortal {
   /**
    * @property {EventTargetFoundation} eventTarget - EventTargetFoundation instance used to publish/subscribe events
    */
-  private readonly eventTarget = new EventTargetFoundation();
+  protected readonly eventTarget = new EventTargetFoundation();
   /**
    * @property {NotificationStrategyFoundation} notificationStrategy - NotificationStrategyFoundation instance used on subscribe time to encapsulate notifications strategies
    */
-  private readonly notificationStrategy: NotificationStrategyFoundation;
+  protected readonly notificationStrategy: NotificationStrategyFoundation;
 
   /**
    * Creates @EventPortal objects initialized with a supported notification strategy.
