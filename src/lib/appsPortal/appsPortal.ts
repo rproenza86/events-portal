@@ -1,5 +1,5 @@
 import { AppEventPortal } from '../appEventPortal/appEventPortal';
-import { NotificationStrategyFoundation } from '../eventPortal/strategies/notification/notificationStrategyFoundation';
+import { NotificationStrategyFoundation } from '../strategies/notification/notificationStrategyFoundation';
 import { Traces } from '../traces/traces';
 
 interface AppsPortals {

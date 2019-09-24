@@ -1,7 +1,7 @@
-import { NotificationStrategy } from '../constants';
-import { EventPortal } from './eventPortal';
-import { CallbackStrategy } from './strategies/notification/callBackStrategy';
-import { ReduxStrategy } from './strategies/notification/reduxStrategy';
+import { NotificationStrategy } from '../../constants';
+import { EventPortal } from '../../eventPortal/eventPortal';
+import { CallbackStrategy } from '../../strategies/notification/callBackStrategy';
+import { ReduxStrategy } from '../../strategies/notification/reduxStrategy';
 
 /**
  * Class factory to abstract the EventPortal instances based on

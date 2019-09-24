@@ -1,2 +1,2 @@
 export * from './lib/constants';
-export { EventPortalFactory } from './lib/eventPortal/eventPortalFactory';
+export { EventPortalFactory } from './lib/factories/eventPortalFactory/eventPortalFactory';

@@ -1,9 +1,9 @@
 import test from 'ava';
-import { NotificationStrategy } from '../../../constants';
+import { NotificationStrategy } from '../../constants';
 import {
   EventFoundation,
   EventFoundationConstructorParams
-} from '../../../eventFoundation/EventFoundation';
+} from '../../eventFoundation/EventFoundation';
 import { CallbackStrategy } from './callBackStrategy';
 
 // tslint:disable: no-let

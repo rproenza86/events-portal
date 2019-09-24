@@ -4,7 +4,7 @@ import {
   EventFoundation,
   EventFoundationConstructorParams
 } from '../eventFoundation/EventFoundation';
-import { ReduxStrategy } from '../eventPortal/strategies/notification/reduxStrategy';
+import { ReduxStrategy } from '../strategies/notification/reduxStrategy';
 import { AppEventPortal } from './AppEventPortal';
 
 // tslint:disable: no-let

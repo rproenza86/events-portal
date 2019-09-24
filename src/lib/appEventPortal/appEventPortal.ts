@@ -3,7 +3,7 @@ import {
   EventFoundationConstructorParams
 } from '../eventFoundation/EventFoundation';
 import { EventPortal } from '../eventPortal/eventPortal';
-import { NotificationStrategyFoundation } from '../eventPortal/strategies/notification/notificationStrategyFoundation';
+import { NotificationStrategyFoundation } from '../strategies/notification/notificationStrategyFoundation';
 import { Traces } from '../traces/traces';
 
 /**

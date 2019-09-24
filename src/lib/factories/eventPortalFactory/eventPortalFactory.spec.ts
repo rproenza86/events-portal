@@ -1,6 +1,6 @@
 import test from 'ava';
-import { NotificationStrategy } from '../constants';
-import { EventPortal } from './eventPortal';
+import { NotificationStrategy } from '../../constants';
+import { EventPortal } from '../../eventPortal/eventPortal';
 import { EventPortalFactory } from './eventPortalFactory';
 
 // tslint:disable: no-let

@@ -3,7 +3,7 @@ import {
   EventFoundationConstructorParams
 } from '../eventFoundation/EventFoundation';
 import { EventTargetFoundation } from '../eventTargetFoundation/EventTargetFoundation';
-import { NotificationStrategyFoundation } from './strategies/notification/notificationStrategyFoundation';
+import { NotificationStrategyFoundation } from '../strategies/notification/notificationStrategyFoundation';
 
 /**
  * Controller class to abstract the events subscription and publishing actions.

@@ -1,4 +1,4 @@
-import { NotificationStrategy } from '../../../constants';
+import { NotificationStrategy } from '../../constants';
 import { NotificationStrategyFoundation } from './notificationStrategyFoundation';
 
 /**
