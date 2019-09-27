@@ -3,8 +3,8 @@ import test from 'ava';
 import {
   EventFoundation,
   EventFoundationConstructorParams
-} from '../eventFoundation/EventFoundation';
-import { ReduxStrategy } from '../strategies/notification/reduxStrategy';
+} from './../eventFoundation/EventFoundation';
+import { ReduxStrategy } from './../strategies/notification/reduxStrategy';
 import { AppEventPortal } from './AppEventPortal';
 
 // tslint:disable: no-let
