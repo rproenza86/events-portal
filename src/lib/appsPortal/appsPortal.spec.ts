@@ -3,7 +3,7 @@ import test from 'ava';
 import { AppEventPortal } from '../appEventPortal/appEventPortal';
 import { NotificationStrategy } from '../constants';
 import { EventFoundationConstructorParams } from '../eventFoundation/eventFoundation';
-// import { Traces } from '../traces/traces';
+import { Traces } from '../traces/traces';
 import { AppsPortal } from './appsPortal';
 
 // tslint:disable: no-let
@@ -107,16 +107,16 @@ test('Should not register the same app twice', t => {
   t.is(appAEventPortal === appASingletonEventPortal, true);
 });
 
-// test('Should register app with its own traceLogs instance', t => {
-//   const theAppsPortal = new AppsPortal();
-//   const registrationObjectAppAClone = {
-//     ...registrationObjectAppA,
-//     traceLogs: new Traces()
-//   };
+test('Should register app with its own traceLogs instance', t => {
+  const theAppsPortal = new AppsPortal();
+  const registrationObjectAppAClone = {
+    ...registrationObjectAppA,
+    traceLogs: new Traces()
+  };
 
-//   const appCloneAEventPortal = theAppsPortal.registerApp(
-//     registrationObjectAppAClone
-//   );
+  const appCloneAEventPortal = theAppsPortal.registerApp(
+    registrationObjectAppAClone
+  );
 
-//   t.is(appCloneAEventPortal.constructor.name, 'AppEventPortal');
-// });
+  t.is(appCloneAEventPortal.constructor.name, 'AppEventPortal');
+});
