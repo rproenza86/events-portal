@@ -1,5 +1,5 @@
 {
-  "name": "@rproenza/events-portal",
+  "name": "@rproenza/micro-frontend-events-portal",
   "description": "Enable UI events communication between independents web apps",
   "version": "0.1.0",
   "main": "build/main/index.js",
@@ -103,11 +103,13 @@
     ]
   },
   "author": "Raul Rodriguez Proenza <raul.r.proenza@gmail.com> (https://github.com/rproenza86)",
-  "contributors": [{
-    "name": "Raúl Rodríguez Proenza",
-    "email": "raul.r.proenza@gmail.com",
-    "url": "https://raulproenza.page"
-  }],
+  "contributors": [
+    {
+      "name": "Raúl Rodríguez Proenza",
+      "email": "raul.r.proenza@gmail.com",
+      "url": "https://raulproenza.page"
+    }
+  ],
   "homepage": "https://github.com/rproenza86/events-portal#readme",
   "license": "GPL-3.0-or-later",
   "bugs": {

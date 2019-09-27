@@ -1,4 +1,4 @@
-events-portal
+micro-frontend-events-portal
 ====================
 
 NPM package to enable communications between independents web applications such as micro ui/frontend web app.
