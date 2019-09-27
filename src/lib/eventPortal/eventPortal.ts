@@ -1,8 +1,8 @@
 import {
   EventFoundation,
   EventFoundationConstructorParams
-} from '../eventFoundation/EventFoundation';
-import { EventTargetFoundation } from '../eventTargetFoundation/EventTargetFoundation';
+} from '../eventFoundation/eventFoundation';
+import { EventTargetFoundation } from '../eventTargetFoundation/eventTargetFoundation';
 import { NotificationStrategyFoundation } from '../strategies/notification/notificationStrategyFoundation';
 
 /**

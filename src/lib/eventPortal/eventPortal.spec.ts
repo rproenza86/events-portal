@@ -4,7 +4,7 @@ import { NotificationStrategy } from '../constants';
 import {
   EventFoundation,
   EventFoundationConstructorParams
-} from '../eventFoundation/EventFoundation';
+} from '../eventFoundation/eventFoundation';
 import { ReduxStrategy } from '../strategies/notification/reduxStrategy';
 import { EventPortal } from './eventPortal';
 

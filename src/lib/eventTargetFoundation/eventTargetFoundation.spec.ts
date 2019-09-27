@@ -3,7 +3,7 @@ import {
   EventFoundation,
   EventFoundationConstructorParams
 } from '../eventFoundation/eventFoundation';
-import { EventTargetFoundation } from './EventTargetFoundation';
+import { EventTargetFoundation } from './eventTargetFoundation';
 
 const eventName = 'TEST_EVENT';
 

@@ -3,7 +3,7 @@ import { NotificationStrategy } from '../../constants';
 import {
   EventFoundation,
   EventFoundationConstructorParams
-} from '../../eventFoundation/EventFoundation';
+} from '../../eventFoundation/eventFoundation';
 import { CallbackStrategy } from './callBackStrategy';
 
 // tslint:disable: no-let

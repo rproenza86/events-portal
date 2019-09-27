@@ -3,7 +3,7 @@ import test from 'ava';
 import {
   EventFoundation,
   EventFoundationConstructorParams
-} from '../eventFoundation/EventFoundation';
+} from '../eventFoundation/eventFoundation';
 import { Traces } from './traces';
 
 // tslint:disable: no-let
