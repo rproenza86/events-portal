@@ -2,7 +2,7 @@ import test from 'ava';
 import {
   EventFoundation,
   EventFoundationConstructorParams
-} from './EventFoundation';
+} from './eventFoundation';
 
 // tslint:disable-next-line: no-let
 let event: EventFoundation;

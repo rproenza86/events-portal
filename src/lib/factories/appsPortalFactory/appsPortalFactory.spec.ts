@@ -1,7 +1,7 @@
 import test from 'ava';
-import { AppEventPortal } from '../../appEventPortal/AppEventPortal';
+import { AppEventPortal } from '../../appEventPortal/appEventPortal';
 import { NotificationStrategy } from '../../constants';
-import { EventFoundationConstructorParams } from '../../eventFoundation/EventFoundation';
+import { EventFoundationConstructorParams } from '../../eventFoundation/eventFoundation';
 import { Traces } from '../../traces/traces';
 import { AppsPortalFactory } from './appsPortalFactory';
 

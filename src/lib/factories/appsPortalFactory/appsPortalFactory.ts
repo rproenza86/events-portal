@@ -1,4 +1,4 @@
-import { AppEventPortal } from '../../appEventPortal/AppEventPortal';
+import { AppEventPortal } from '../../appEventPortal/appEventPortal';
 import { NotificationStrategy } from '../../constants';
 import { CallbackStrategy } from '../../strategies/notification/callBackStrategy';
 import { ReduxStrategy } from '../../strategies/notification/reduxStrategy';

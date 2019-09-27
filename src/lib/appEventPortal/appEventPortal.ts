@@ -1,7 +1,7 @@
 import {
   EventFoundation,
   EventFoundationConstructorParams
-} from '../eventFoundation/EventFoundation';
+} from '../eventFoundation/eventFoundation';
 import { EventPortal } from '../eventPortal/eventPortal';
 import { NotificationStrategyFoundation } from '../strategies/notification/notificationStrategyFoundation';
 import { Traces } from '../traces/traces';
