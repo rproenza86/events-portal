@@ -53,9 +53,7 @@
     "node": ">=8.9"
   },
   "dependencies": {
-    "redux": "^4.0.4"
-  },
-  "devDependencies": {
+    "redux": "^4.0.4",
     "@bitjson/npm-scripts-info": "^1.0.0",
     "@bitjson/typedoc": "^0.15.0-0",
     "@istanbuljs/nyc-config-typescript": "^0.1.3",
@@ -76,6 +74,7 @@
     "tslint-immutable": "^6.0.1",
     "typescript": "^3.5.3"
   },
+  "devDependencies": {},
   "ava": {
     "failFast": true,
     "require": [
