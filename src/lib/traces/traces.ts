@@ -43,7 +43,11 @@ export class Traces {
    * @param {CustomEvent} event - Published event
    */
   public logPublishedEvent(publisherName: string, event: CustomEvent): void {
-    this.saveAppLogByActionType(publisherName, event, ActionType.Publishing);
+    this.saveAppLogByActionType({
+      actionType: ActionType.Publishing,
+      appName: publisherName,
+      event
+    });
   }
 
   /**
@@ -53,7 +57,11 @@ export class Traces {
    * @param {CustomEvent} event - Published event
    */
   public logNotifiedEvent(subscriberName: string, event: CustomEvent): void {
-    this.saveAppLogByActionType(subscriberName, event, ActionType.Notifying);
+    this.saveAppLogByActionType({
+      actionType: ActionType.Notifying,
+      appName: subscriberName,
+      event
+    });
   }
 
   /**
@@ -111,15 +119,20 @@ export class Traces {
   /**
    * Save an app log into the corresponding action type section.
    *
-   * @param {string} publisherName - Name of the micro frontend app or component which published the event
-   * @param {CustomEvent} event - Published event
-   * @param {ActionType = 'published' | 'notified'} actionType The log action type
+   * @param {Object} saveAppLogObject
+   * @param {string} saveAppLogObject.publisherName - Name of the micro frontend app or component which published the event
+   * @param {CustomEvent} saveAppLogObject.event - Published event
+   * @param {ActionType = 'published' | 'notified'} saveAppLogObject.actionType The log action type
    */
-  private saveAppLogByActionType(
-    appName: string,
-    event: CustomEvent,
-    actionType: ActionType
-  ): void {
+  private saveAppLogByActionType({
+    appName,
+    event,
+    actionType
+  }: {
+    appName: string;
+    event: CustomEvent;
+    actionType: ActionType;
+  }): void {
     const isPublishingTrace = actionType === ActionType.Publishing;
     const appLogs = isPublishingTrace
       ? this.getPublishedLogsByPublisherName(appName)
@@ -132,7 +145,11 @@ export class Traces {
 
     appLogs.set(event.type, newEventLog);
 
-    this.updateActionTypeLogByAppName(appName, appLogs, isPublishingTrace);
+    this.updateActionTypeLogByAppName({
+      appName,
+      isPublishingTrace,
+      publishedEventsMap: appLogs
+    });
   }
 
   /**
@@ -190,15 +207,20 @@ export class Traces {
   /**
    * Method to update an app notified or published events log.
    *
-   * @param {string} appName - Name of the micro frontend app or component which published the event
-   * @param {Map<string, any>} publishedEventsMap - Map object containing the published events log for this publisher
-   * @param {boolean} isPublishingTrace - Use to determine what part of the map update
+   * @param {Object} updateActionLogObject
+   * @param {string} updateActionLogObject.appName - Name of the micro frontend app or component which published the event
+   * @param {Map<string, any>} updateActionLogObject.publishedEventsMap - Map object containing the published events log for this publisher
+   * @param {boolean} updateActionLogObject.isPublishingTrace - Use to determine what part of the map update
    */
-  private updateActionTypeLogByAppName(
-    appName: string,
-    publishedEventsMap: Map<string, any>,
-    isPublishingTrace: boolean
-  ): void {
+  private updateActionTypeLogByAppName({
+    appName,
+    publishedEventsMap,
+    isPublishingTrace
+  }: {
+    appName: string;
+    publishedEventsMap: Map<string, any>;
+    isPublishingTrace: boolean;
+  }): void {
     let newActionTypeEventsLog: Map<string, any>;
     const actionType: ActionType = isPublishingTrace
       ? ActionType.Publishing
