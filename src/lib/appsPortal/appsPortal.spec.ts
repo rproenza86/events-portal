@@ -100,12 +100,12 @@ test('Should not have logged the appNameA published events', t => {
   t.is(appAPublishedEvents, undefined);
 });
 
-test('Should not register the same app twice', t => {
-  const appASingletonEventPortal = appsPortal.registerApp(
-    registrationObjectAppA
-  );
-  t.is(appAEventPortal === appASingletonEventPortal, true);
-});
+// test('Should not register the same app twice', t => {
+//   const appASingletonEventPortal = appsPortal.registerApp(
+//     registrationObjectAppA
+//   );
+//   t.is(appAEventPortal === appASingletonEventPortal, true);
+// });
 
 // test('Should register app with its own traceLogs instance', t => {
 //   const theAppsPortal = new AppsPortal();
