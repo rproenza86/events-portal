@@ -8,7 +8,7 @@ micro-frontend-events-portal
 
 NPM package to enable communications between independents web applications such as micro ui/frontend web app.
 
-> [Semi-auto Generated Code documentation](https://rproenza86.github.io/micro-frontend-events-portal/)
+> [Semi-auto generated code documentation](https://rproenza86.github.io/micro-frontend-events-portal/)
 
 NPM Publish Job
 ---------------
