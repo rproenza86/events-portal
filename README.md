@@ -1,5 +1,6 @@
 micro-frontend-events-portal
 ====================
+[![codecov - Unit test Coverture](https://codecov.io/gh/rproenza86/micro-frontend-events-portal/branch/master/graph/badge.svg)](https://codecov.io/gh/rproenza86/micro-frontend-events-portal)
 
 NPM package to enable communications between independents web applications such as micro ui/frontend web app.
 
