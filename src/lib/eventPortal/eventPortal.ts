@@ -70,10 +70,10 @@ export class EventPortal {
     eventName: string,
     strategyCallBack: any = this.notificationStrategy // TODO: Check how to change the 'any' for 'NotificationStrategyFoundation' as proper type
   ): EventPortal {
-    this.eventTarget.subscribeEventListener(
-      eventName,
-      strategyCallBack.onNotification.bind(strategyCallBack) // Avoiding scoping problems
-    );
+    this.eventTarget.subscribeEventListener({
+      listener: strategyCallBack.onNotification.bind(strategyCallBack), // Avoiding scoping problems
+      type: eventName
+    });
 
     return this;
   }

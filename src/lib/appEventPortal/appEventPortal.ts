@@ -19,11 +19,23 @@ export class AppEventPortal extends EventPortal {
   // Application name
   private readonly appName: string;
 
-  constructor(
-    strategy: NotificationStrategyFoundation,
-    appName: string,
-    tracesInstance?: Traces
-  ) {
+  /**
+   * Creates AppEventPortal instance objects
+   *
+   * @param {Object} constructorObject
+   * @param {NotificationStrategyFoundation} constructorObject.strategy - NotificationStrategyFoundation instance object to use on notification times
+   * @param {string} constructorObject.appName - The application name
+   * @param {Traces} constructorObject.tracesInstance -  Traces Instance object to store all the publishing and notification events
+   */
+  constructor({
+    strategy,
+    appName,
+    tracesInstance
+  }: {
+    strategy: NotificationStrategyFoundation;
+    appName: string;
+    tracesInstance?: Traces;
+  }) {
     super(strategy);
     this.appName = appName;
     if (tracesInstance) {
@@ -47,13 +59,13 @@ export class AppEventPortal extends EventPortal {
   ): EventPortal {
     const callBack = (event: any) => {
       this.traceLogs.logNotifiedEvent(this.appName, event);
-      strategyCallBack.onNotification.call(strategyCallBack, event);
+      strategyCallBack.onNotification.call(strategyCallBack, event); // Avoiding scoping problems
     };
 
-    this.eventTarget.subscribeEventListener(
-      eventName,
-      callBack // Avoiding scoping problems
-    );
+    this.eventTarget.subscribeEventListener({
+      listener: callBack,
+      type: eventName
+    });
 
     return this;
   }

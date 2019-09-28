@@ -27,10 +27,10 @@ test('Should publish event properly', t => {
   let eventPublished = {} as CustomEvent;
   const eventSubscriptionHandler = (e: CustomEvent) => (eventPublished = e);
 
-  eventTarget.subscribeEventListener(
-    eventName,
-    eventSubscriptionHandler as any
-  );
+  eventTarget.subscribeEventListener({
+    listener: eventSubscriptionHandler as any,
+    type: eventName
+  });
   eventTarget.publishEvent(event.getEvent());
 
   t.deepEqual(eventPublished.detail, {
@@ -44,15 +44,15 @@ test('Should unsubscribe event properly', t => {
     eventPublished = e;
   }
 
-  eventTarget.subscribeEventListener(
-    eventName,
-    eventSubscriptionHandler as any
-  );
+  eventTarget.subscribeEventListener({
+    listener: eventSubscriptionHandler as any,
+    type: eventName
+  });
 
-  eventTarget.unsubscribeEventListener(
-    eventName,
-    eventSubscriptionHandler as any
-  );
+  eventTarget.unsubscribeEventListener({
+    callback: eventSubscriptionHandler as any,
+    type: eventName
+  });
 
   eventTarget.publishEvent(event.getEvent());
 
