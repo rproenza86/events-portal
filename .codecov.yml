@@ -1,3 +1,7 @@
+codecov:
+  notify:
+    require_ci_to_pass: yes
+
 coverage:
   range: 100..100
   round: down
