@@ -1,5 +1,4 @@
 import test from 'ava';
-// import { ActionType } from '../constants';
 import {
   EventFoundation,
   EventFoundationConstructorParams
@@ -7,7 +6,6 @@ import {
 import { Traces } from './traces';
 
 // tslint:disable: no-let
-
 // setup
 let traceLogs: Traces;
 const appA = 'ShopperPlatform';
