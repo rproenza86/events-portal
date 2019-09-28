@@ -5,6 +5,7 @@ micro-frontend-events-portal
 [![Build Status](https://travis-ci.org/rproenza86/micro-frontend-events-portal.svg?branch=master)](https://travis-ci.org/rproenza86/micro-frontend-events-portal)
 [![CodeFactor](https://www.codefactor.io/repository/github/rproenza86/micro-frontend-events-portal/badge)](https://www.codefactor.io/repository/github/rproenza86/micro-frontend-events-portal)
 [![DeepScan grade](https://deepscan.io/api/teams/5543/projects/7383/branches/73646/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=5543&pid=7383&bid=73646)
+[![codebeat badge](https://codebeat.co/badges/872bb768-f599-4e13-8ed4-15a39132a633)](https://codebeat.co/projects/github-com-rproenza86-micro-frontend-events-portal-master)
 ![GitHub](https://img.shields.io/github/license/rproenza86/micro-frontend-events-portal)
 
 NPM package to enable communications between independents web applications such as micro ui/frontend web app.
