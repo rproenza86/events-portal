@@ -47,13 +47,13 @@ export class AppEventPortal extends EventPortal {
   ): EventPortal {
     const callBack = (event: any) => {
       this.traceLogs.logNotifiedEvent(this.appName, event);
-      strategyCallBack.onNotification.call(strategyCallBack, event);
+      strategyCallBack.onNotification.call(strategyCallBack, event); // Avoiding scoping problems
     };
 
-    this.eventTarget.subscribeEventListener(
-      eventName,
-      callBack // Avoiding scoping problems
-    );
+    this.eventTarget.subscribeEventListener({
+      listener: callBack,
+      type: eventName
+    });
 
     return this;
   }

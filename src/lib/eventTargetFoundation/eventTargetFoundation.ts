@@ -41,30 +41,40 @@ export class EventTargetFoundation {
   /**
    * Method to subscribe/register a listener to a given event
    *
-   * @param {string} type The event type/name to which the client wants to be subscribed.
-   * @param {function} listener Callback function to invoke each time the event of interest is published
-   * @param {boolean | object} options Subscription configuration. Optional.
+   * @param {Object} subscribingObject
+   * @param {string} subscribingObject.type The event type/name to which the client wants to be subscribed.
+   * @param {function} subscribingObject.listener Callback function to invoke each time the event of interest is published
+   * @param {boolean | object} subscribingObject.options Subscription configuration. Optional.
    */
-  public subscribeEventListener(
-    type: string,
-    listener: EventListenerOrEventListenerObject | null,
-    options?: boolean | AddEventListenerOptions
-  ): void {
+  public subscribeEventListener({
+    type,
+    listener,
+    options
+  }: {
+    type: string;
+    listener: EventListenerOrEventListenerObject | null;
+    options?: boolean | AddEventListenerOptions;
+  }): void {
     return this.eventTarget.addEventListener(type, listener, options);
   }
 
   /**
    * Method to un-subscribe/un-register a listener to a given event
    *
-   * @param {string} type The event type/name to which the client wants to be un-subscribed.
-   * @param {function} listener Callback function to invoke each time the event of interest is published. Same used on subscription time.
-   * @param {boolean | object} options Subscription configuration. Optional. Same used on subscription time.
+   * @param {Object} unsubscribingObject
+   * @param {string} unsubscribingObject.type The event type/name to which the client wants to be un-subscribed.
+   * @param {function} unsubscribingObject.listener Callback function to invoke each time the event of interest is published. Same used on subscription time.
+   * @param {boolean | object} unsubscribingObject.options Subscription configuration. Optional. Same used on subscription time.
    */
-  public unsubscribeEventListener(
-    type: string,
-    callback: EventListenerOrEventListenerObject | null,
-    options?: EventListenerOptions | boolean
-  ): void {
+  public unsubscribeEventListener({
+    type,
+    callback,
+    options
+  }: {
+    type: string;
+    callback: EventListenerOrEventListenerObject | null;
+    options?: EventListenerOptions | boolean;
+  }): void {
     return this.eventTarget.removeEventListener(type, callback, options);
   }
 }
