@@ -32,7 +32,7 @@ test.before(() => {
   event = new EventFoundation(params);
 
   const reduxStrategy: ReduxStrategy = new ReduxStrategy(mockStore);
-  appEventPortal = new AppEventPortal(reduxStrategy, appName);
+  appEventPortal = new AppEventPortal({ strategy: reduxStrategy, appName });
   appEventPortal.listenEvent(params.eventType);
 });
 

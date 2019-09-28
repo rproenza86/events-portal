@@ -48,6 +48,6 @@ export class AppsPortalFactory {
         throw new Error('Unsupported strategy notification type.');
     }
 
-    return new AppEventPortal(strategy, appName, traceLogs);
+    return new AppEventPortal({ strategy, appName, tracesInstance: traceLogs });
   }
 }
