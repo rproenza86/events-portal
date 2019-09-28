@@ -6,8 +6,9 @@ micro-frontend-events-portal
 [![CodeFactor](https://www.codefactor.io/repository/github/rproenza86/micro-frontend-events-portal/badge)](https://www.codefactor.io/repository/github/rproenza86/micro-frontend-events-portal)
 ![GitHub](https://img.shields.io/github/license/rproenza86/micro-frontend-events-portal)
 
-
 NPM package to enable communications between independents web applications such as micro ui/frontend web app.
+
+> [Semi-auto Generated Code documentation](https://rproenza86.github.io/micro-frontend-events-portal/)
 
 NPM Publish Job
 ---------------
