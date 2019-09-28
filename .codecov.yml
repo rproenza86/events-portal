@@ -11,3 +11,20 @@ comment:
   require_head: yes # [yes :: must have a head report to post]
   branches: null # branch names that can post comment
 
+coverage:
+  status:
+    project:
+      default:
+        # basic
+        target: 100%
+        threshold: null # number - Allow the coverage to drop by X%, and posting a success status.
+        base: auto
+        # advanced
+        branches: null
+        if_no_uploads: error
+        if_not_found: success
+        if_ci_failed: error
+        only_pulls: false
+        flags: null
+        paths: null
+
