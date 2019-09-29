@@ -11,6 +11,47 @@ interface AppsPortals {
 /**
  * Class to use an unique events portal system on all the micro frontend apps enabling
  * a centralized login system.
+ *
+ * ### Example (es module)
+ * ```js
+ * import { AppsPortal } from '@rproenza/micro-frontend-events-portal';
+ *
+ * const appsPortal = new AppsPortal();
+ *
+ * const appAEventPortal = appsPortal.registerApp(registrationObjectAppA);
+ * appAEventPortal
+ *    .listenEvent('EVENT_APP_B-ADDED-Bss') // => appAEventPortal is now listening for 'EVENT_APP_B-ADDED-Bss' events
+ *    .listenEvent('EVENT_APP_B-DELETED-Bss'); // => appAEventPortal is now listening for 'EVENT_APP_B-DELETED-Bss' events
+ *
+ * const appBEventPortal = appsPortal.registerApp(registrationObjectAppB);
+ * appBEventPortal
+ *    .listenEvent('EVENT_APP_A-ADDED-Ass') // => appBEventPortal is now listening for 'EVENT_APP_A-ADDED-Ass' events
+ *    .listenEvent('EVENT_APP_A-DELETED-Ass'); // => appBEventPortal is now listening for 'EVENT_APP_A-DELETED-Ass' events
+ *
+ * appAEventPortal.notifyEvent('EVENT_APP_A-ADDED-Ass', eventPayload); // => appBEventPortal is notified about the 'EVENT_APP_A-ADDED-Ass' event
+ * appBEventPortal.notifyEvent('EVENT_APP_B-DELETED-Bss', eventPayload); // => appAEventPortal is notified about the 'EVENT_APP_B-DELETED-Bss event
+ * ```
+ *
+ * ### Example (commonjs)
+ * ```js
+ * var AppsPortal = require('@rproenza/micro-frontend-events-portal').AppsPortal;
+ *
+ * var appsPortal = new AppsPortal();
+ *
+ * var appAEventPortal = appsPortal.registerApp(registrationObjectAppA);
+ * appAEventPortal
+ *    .listenEvent('EVENT_APP_B-ADDED-Bss') // => appAEventPortal is now listening for 'EVENT_APP_B-ADDED-Bss' events
+ *    .listenEvent('EVENT_APP_B-DELETED-Bss'); // => appAEventPortal is now listening for 'EVENT_APP_B-DELETED-Bss' events
+ *
+ * var appBEventPortal = appsPortal.registerApp(registrationObjectAppB);
+ * appBEventPortal
+ *    .listenEvent('EVENT_APP_A-ADDED-Ass') // => appBEventPortal is now listening for 'EVENT_APP_A-ADDED-Ass' events
+ *    .listenEvent('EVENT_APP_A-DELETED-Ass'); // => appBEventPortal is now listening for 'EVENT_APP_A-DELETED-Ass' events
+ *
+ * appAEventPortal.notifyEvent('EVENT_APP_A-ADDED-Ass', eventPayload); // => appBEventPortal is notified about the 'EVENT_APP_A-ADDED-Ass' event
+ * appBEventPortal.notifyEvent('EVENT_APP_B-DELETED-Bss', eventPayload); // => appAEventPortal is notified about the 'EVENT_APP_B-DELETED-Bss event
+ * ```
+ *
  */
 export class AppsPortal {
   private readonly appsPortals: AppsPortals = {};
