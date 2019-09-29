@@ -2,3 +2,6 @@ component_depth: 12
 languages:
 - typescript
 - javascript
+exclude:
+- ./vscode/.*
+- ./src/cli/.*
