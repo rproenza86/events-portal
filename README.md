@@ -21,9 +21,11 @@
 
 <hr/>
 
-`micro-frontend-events-portal` is an NPM package inspired by the need of Micro UI/FrontEnd apps to communicate between each other in a loosely fashion.
+**`micro-frontend-events-portal` is an NPM package inspired by the need of Micro UI/FrontEnd apps to communicate between each other in a loosely fashion.**
 
-Micro UI/FrontEnd apps are independents web applications which keeps communications and coupling to a minimum an solves business requirements independently.
+**Micro UI/FrontEnd apps are independents web applications which keeps communications and coupling to a minimum an solves business requirements independently.**
+
+<hr/>
 
 ## Getting Started
 
@@ -131,9 +133,11 @@ npm install @rproenza/micro-frontend-events-portal
   */
 ```
 
+<hr/>
+
 ## Collaboration section
 
-## Contributing
+### Contributing
 
 * PRs require at least one reviewer's approval.
 * PRs require all automated checks have passed.
@@ -198,6 +202,8 @@ npm run reset && npm run test && npm run cov:check && npm run doc:html
 npm run version -- --first-release
 ```
 
+<hr/>
+
 ## Built With
 
 * [Travis.ci](https://travis-ci.org/) - CI/CD service. Testing, deployment and release
@@ -207,9 +213,13 @@ npm run version -- --first-release
 * [Codebeat](https://codebeat.co) - Automated code review help you prioritize issues find refactoring opportunities and identify quick wins in your applications
 * [BetterCodeHub](https://bettercodehub.com) - Definition of Done for code quality
 
+<hr/>
+
 ## Versioning
 
 This project is tooled for [conventional changelog](https://github.com/conventional-changelog/conventional-changelog) to make managing releases easier. See the [standard-version](https://github.com/conventional-changelog/standard-version) documentation for more information on the workflow, or [`CHANGELOG.md`](CHANGELOG.md) for an example.
+
+<hr/>
 
 ## Authors
 
@@ -218,9 +228,13 @@ This project is tooled for [conventional changelog](https://github.com/conventio
   * [RaulProenza.Page](https://raulproenza.page)
   * [Linkedin.com](https://www.linkedin.com/in/raulproenza/)
 
+<hr/>
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+<hr/>
 
 ## Acknowledgments
 
