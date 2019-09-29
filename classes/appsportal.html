@@ -72,6 +72,44 @@
 						<p>Class to use an unique events portal system on all the micro frontend apps enabling
 						a centralized login system.</p>
 					</div>
+					<a href="#example-es-module" id="example-es-module" style="color: inherit; text-decoration: none;">
+						<h3>Example (es module)</h3>
+					</a>
+					<pre><code class="language-js"><span class="hljs-keyword">import</span> { AppsPortal } <span class="hljs-keyword">from</span> <span class="hljs-string">'@rproenza/micro-frontend-events-portal'</span>;
+
+<span class="hljs-keyword">const</span> appsPortal = <span class="hljs-keyword">new</span> AppsPortal();
+
+<span class="hljs-keyword">const</span> appAEventPortal = appsPortal.registerApp(registrationObjectAppA);
+appAEventPortal
+   .listenEvent(<span class="hljs-string">'EVENT_APP_B-ADDED-Bss'</span>) <span class="hljs-comment">// =&gt; appAEventPortal is now listening for 'EVENT_APP_B-ADDED-Bss' events</span>
+   .listenEvent(<span class="hljs-string">'EVENT_APP_B-DELETED-Bss'</span>); <span class="hljs-comment">// =&gt; appAEventPortal is now listening for 'EVENT_APP_B-DELETED-Bss' events</span>
+
+<span class="hljs-keyword">const</span> appBEventPortal = appsPortal.registerApp(registrationObjectAppB);
+appBEventPortal
+   .listenEvent(<span class="hljs-string">'EVENT_APP_A-ADDED-Ass'</span>) <span class="hljs-comment">// =&gt; appBEventPortal is now listening for 'EVENT_APP_A-ADDED-Ass' events</span>
+   .listenEvent(<span class="hljs-string">'EVENT_APP_A-DELETED-Ass'</span>); <span class="hljs-comment">// =&gt; appBEventPortal is now listening for 'EVENT_APP_A-DELETED-Ass' events</span>
+
+appAEventPortal.notifyEvent(<span class="hljs-string">'EVENT_APP_A-ADDED-Ass'</span>, eventPayload); <span class="hljs-comment">// =&gt; appBEventPortal is notified about the 'EVENT_APP_A-ADDED-Ass' event</span>
+appBEventPortal.notifyEvent(<span class="hljs-string">'EVENT_APP_B-DELETED-Bss'</span>, eventPayload); <span class="hljs-comment">// =&gt; appAEventPortal is notified about the 'EVENT_APP_B-DELETED-Bss event</span></code></pre>
+					<a href="#example-commonjs" id="example-commonjs" style="color: inherit; text-decoration: none;">
+						<h3>Example (commonjs)</h3>
+					</a>
+					<pre><code class="language-js"><span class="hljs-keyword">var</span> AppsPortal = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@rproenza/micro-frontend-events-portal'</span>).AppsPortal;
+
+<span class="hljs-keyword">var</span> appsPortal = <span class="hljs-keyword">new</span> AppsPortal();
+
+<span class="hljs-keyword">var</span> appAEventPortal = appsPortal.registerApp(registrationObjectAppA);
+appAEventPortal
+   .listenEvent(<span class="hljs-string">'EVENT_APP_B-ADDED-Bss'</span>) <span class="hljs-comment">// =&gt; appAEventPortal is now listening for 'EVENT_APP_B-ADDED-Bss' events</span>
+   .listenEvent(<span class="hljs-string">'EVENT_APP_B-DELETED-Bss'</span>); <span class="hljs-comment">// =&gt; appAEventPortal is now listening for 'EVENT_APP_B-DELETED-Bss' events</span>
+
+<span class="hljs-keyword">var</span> appBEventPortal = appsPortal.registerApp(registrationObjectAppB);
+appBEventPortal
+   .listenEvent(<span class="hljs-string">'EVENT_APP_A-ADDED-Ass'</span>) <span class="hljs-comment">// =&gt; appBEventPortal is now listening for 'EVENT_APP_A-ADDED-Ass' events</span>
+   .listenEvent(<span class="hljs-string">'EVENT_APP_A-DELETED-Ass'</span>); <span class="hljs-comment">// =&gt; appBEventPortal is now listening for 'EVENT_APP_A-DELETED-Ass' events</span>
+
+appAEventPortal.notifyEvent(<span class="hljs-string">'EVENT_APP_A-ADDED-Ass'</span>, eventPayload); <span class="hljs-comment">// =&gt; appBEventPortal is notified about the 'EVENT_APP_A-ADDED-Ass' event</span>
+appBEventPortal.notifyEvent(<span class="hljs-string">'EVENT_APP_B-DELETED-Bss'</span>, eventPayload); <span class="hljs-comment">// =&gt; appAEventPortal is notified about the 'EVENT_APP_B-DELETED-Bss event</span></code></pre>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-hierarchy">
@@ -116,7 +154,7 @@
 					<div class="tsd-signature tsd-kind-icon">apps<wbr>Portals<span class="tsd-signature-symbol">:</span> <a href="../interfaces/appsportals.html" class="tsd-signature-type">AppsPortals</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/c263d6f/src/lib/appsPortal/appsPortal.ts#L16">lib/appsPortal/appsPortal.ts:16</a></li>
+							<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/fce9097/src/lib/appsPortal/appsPortal.ts#L57">lib/appsPortal/appsPortal.ts:57</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -126,7 +164,7 @@
 					<div class="tsd-signature tsd-kind-icon">trace<wbr>Logs<span class="tsd-signature-symbol">:</span> <a href="traces.html" class="tsd-signature-type">Traces</a><span class="tsd-signature-symbol"> =&nbsp;new Traces()</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/c263d6f/src/lib/appsPortal/appsPortal.ts#L20">lib/appsPortal/appsPortal.ts:20</a></li>
+							<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/fce9097/src/lib/appsPortal/appsPortal.ts#L61">lib/appsPortal/appsPortal.ts:61</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -150,7 +188,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/c263d6f/src/lib/appsPortal/appsPortal.ts#L63">lib/appsPortal/appsPortal.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/fce9097/src/lib/appsPortal/appsPortal.ts#L104">lib/appsPortal/appsPortal.ts:104</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -176,7 +214,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/c263d6f/src/lib/appsPortal/appsPortal.ts#L32">lib/appsPortal/appsPortal.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/fce9097/src/lib/appsPortal/appsPortal.ts#L73">lib/appsPortal/appsPortal.ts:73</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">

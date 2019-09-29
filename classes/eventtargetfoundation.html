@@ -127,7 +127,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/c263d6f/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L37">lib/eventTargetFoundation/eventTargetFoundation.ts:37</a></li>
+									<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/fce9097/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L37">lib/eventTargetFoundation/eventTargetFoundation.ts:37</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -153,13 +153,13 @@
 					<a name="subscribeeventlistener" class="tsd-anchor"></a>
 					<h3>subscribe<wbr>Event<wbr>Listener</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">subscribe<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventListenerOrEventListenerObject</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">AddEventListenerOptions</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">subscribe<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/c263d6f/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L48">lib/eventTargetFoundation/eventTargetFoundation.ts:48</a></li>
+									<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/fce9097/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L49">lib/eventTargetFoundation/eventTargetFoundation.ts:49</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -170,22 +170,18 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>type: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The event type/name to which the client wants to be subscribed.</p>
-									</div>
-								</li>
-								<li>
-									<h5>listener: <span class="tsd-signature-type">EventListenerOrEventListenerObject</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Callback function to invoke each time the event of interest is published</p>
-									</div>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">AddEventListenerOptions</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Subscription configuration. Optional.</p>
-									</div>
+									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EventListenerObject</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">AddEventListenerOptions</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -196,13 +192,13 @@
 					<a name="unsubscribeeventlistener" class="tsd-anchor"></a>
 					<h3>unsubscribe<wbr>Event<wbr>Listener</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">unsubscribe<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventListenerOrEventListenerObject</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">EventListenerOptions</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">unsubscribe<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/c263d6f/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L63">lib/eventTargetFoundation/eventTargetFoundation.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/fce9097/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L69">lib/eventTargetFoundation/eventTargetFoundation.ts:69</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -213,19 +209,18 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>type: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The event type/name to which the client wants to be un-subscribed.</p>
-									</div>
-								</li>
-								<li>
-									<h5>callback: <span class="tsd-signature-type">EventListenerOrEventListenerObject</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></h5>
-								</li>
-								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">EventListenerOptions</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">boolean</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>Subscription configuration. Optional. Same used on subscription time.</p>
-									</div>
+									<h5>__namedParameters: <span class="tsd-signature-type">object</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5>callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EventListener</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EventListenerObject</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>options<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">EventListenerOptions</span></h5>
+										</li>
+										<li class="tsd-parameter">
+											<h5>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+										</li>
+									</ul>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -241,7 +236,7 @@
 					<div class="tsd-signature tsd-kind-icon">event<wbr>Target<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/c263d6f/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L25">lib/eventTargetFoundation/eventTargetFoundation.ts:25</a></li>
+							<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/fce9097/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L25">lib/eventTargetFoundation/eventTargetFoundation.ts:25</a></li>
 						</ul>
 					</aside>
 					<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal">
@@ -250,7 +245,7 @@
 						<div class="tsd-signature tsd-kind-icon">add<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">addEventListener</span><span class="tsd-signature-symbol"> =&nbsp;window.addEventListener</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/c263d6f/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L26">lib/eventTargetFoundation/eventTargetFoundation.ts:26</a></li>
+								<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/fce9097/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L26">lib/eventTargetFoundation/eventTargetFoundation.ts:26</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -260,7 +255,7 @@
 						<div class="tsd-signature tsd-kind-icon">dispatch<wbr>Event<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">dispatchEvent</span><span class="tsd-signature-symbol"> =&nbsp;window.dispatchEvent</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/c263d6f/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L27">lib/eventTargetFoundation/eventTargetFoundation.ts:27</a></li>
+								<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/fce9097/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L27">lib/eventTargetFoundation/eventTargetFoundation.ts:27</a></li>
 							</ul>
 						</aside>
 					</section>
@@ -270,7 +265,7 @@
 						<div class="tsd-signature tsd-kind-icon">remove<wbr>Event<wbr>Listener<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">removeEventListener</span><span class="tsd-signature-symbol"> =&nbsp;window.removeEventListener</span></div>
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/c263d6f/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L28">lib/eventTargetFoundation/eventTargetFoundation.ts:28</a></li>
+								<li>Defined in <a href="https://github.com/rproenza86/micro-frontend-events-portal/blob/fce9097/src/lib/eventTargetFoundation/eventTargetFoundation.ts#L28">lib/eventTargetFoundation/eventTargetFoundation.ts:28</a></li>
 							</ul>
 						</aside>
 					</section>

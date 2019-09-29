@@ -64,53 +64,243 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<a href="#micro-frontend-events-portal" id="micro-frontend-events-portal" style="color: inherit; text-decoration: none;">
-					<h1>micro-frontend-events-portal</h1>
-				</a>
+				<h1
+				align="center">
+				micro-frontend-events-portal
+				</h1>
+				<span
+				align="center">
 				<p><a href="https://codecov.io/gh/rproenza86/micro-frontend-events-portal"><img src="https://codecov.io/gh/rproenza86/micro-frontend-events-portal/branch/master/graph/badge.svg" alt="codecov - Unit test Coverture"></a>
 					<a href="https://travis-ci.org/rproenza86/micro-frontend-events-portal"><img src="https://travis-ci.org/rproenza86/micro-frontend-events-portal.svg?branch=master" alt="Build Status"></a>
 					<a href="https://www.codefactor.io/repository/github/rproenza86/micro-frontend-events-portal"><img src="https://www.codefactor.io/repository/github/rproenza86/micro-frontend-events-portal/badge" alt="CodeFactor"></a>
+					<a href="https://deepscan.io/dashboard#view=project&amp;tid=5543&amp;pid=7383&amp;bid=73646"><img src="https://deepscan.io/api/teams/5543/projects/7383/branches/73646/badge/grade.svg" alt="DeepScan grade"></a>
+					<a href="https://codebeat.co/projects/github-com-rproenza86-micro-frontend-events-portal-master"><img src="https://codebeat.co/badges/872bb768-f599-4e13-8ed4-15a39132a633" alt="codebeat badge"></a>
+					<a href="https://bettercodehub.com/"><img src="https://bettercodehub.com/edge/badge/rproenza86/micro-frontend-events-portal?branch=master" alt="BCH compliance"></a>
 				<img src="https://img.shields.io/github/license/rproenza86/micro-frontend-events-portal" alt="GitHub"></p>
-				<p>NPM package to enable communications between independents web applications such as micro ui/frontend web app.</p>
-				<a href="#npm-publish-job" id="npm-publish-job" style="color: inherit; text-decoration: none;">
-					<h2>NPM Publish Job</h2>
-				</a>
-				<a href="#codenpm-linkcode" id="codenpm-linkcode" style="color: inherit; text-decoration: none;">
-					<h2><code>npm link</code></h2>
-				</a>
-				<p>A consumer codebase can <code>npm link</code> all web app repos, by adding a script to <code>package.json</code> such as this:</p>
-				<pre><code><span class="hljs-string">"link-all"</span>: <span class="hljs-string">"dr-activities-shared link"</span>,</code></pre><p>Executing <code>npm run link-all</code> would then:</p>
-				<ol>
-					<li>For each activity repo:</li>
-				</ol>
-				<pre><code><span class="hljs-built_in">npm</span> ci
-<span class="hljs-built_in">npm</span> build
-<span class="hljs-built_in">npm</span> link</code></pre><ol start="2">
-					<li>For the consumer codebase, and for each activity repo:</li>
-				</ol>
-				<pre><code><span class="hljs-selector-tag">npm</span> <span class="hljs-selector-tag">link</span> @<span class="hljs-keyword">rproenza</span>/<span class="hljs-keyword">events</span>-<span class="hljs-keyword">portal</span></code></pre><blockquote>
-					<p><em>To include additional activity repos to be linked, append the activity name <a href="./npm-link.sh#L16" title="./npm-link.sh#L16">here in <code>npm-link.sh</code></a>.</em></p>
+				</span>
+				<hr/>
+				<blockquote>
+					<p>Technology agnostic web applications Communication System. Web Events API foundations.</p>
 				</blockquote>
-				<a href="#troubleshooting" id="troubleshooting" style="color: inherit; text-decoration: none;">
-					<h2>Troubleshooting</h2>
+				<hr/>
+				<p><code>micro-frontend-events-portal</code> is an NPM package inspired by the need of Micro UI/FrontEnd apps to communicate between each other in a loosely fashion.</p>
+				<p>Micro UI/FrontEnd apps are independents web applications which keeps communications and coupling to a minimum an solves business requirements independently.</p>
+				<a href="#getting-started" id="getting-started" style="color: inherit; text-decoration: none;">
+					<h2>Getting Started</h2>
 				</a>
-				<a href="#maintainer" id="maintainer" style="color: inherit; text-decoration: none;">
-					<h2>Maintainer</h2>
+				<p>These instructions will show how to install the package and start using it.</p>
+				<p>If you are interested in the details implementation you can check the <a href="https://rproenza86.github.io/micro-frontend-events-portal/">Semi-auto generated code documentation</a> or the <a href="https://github.com/rproenza86/micro-frontend-events-portal">source code</a>.</p>
+				<a href="#prerequisites" id="prerequisites" style="color: inherit; text-decoration: none;">
+					<h3>Prerequisites</h3>
 				</a>
-				<p>Primary maintainer: Raúl Rodríguez Proenza</p>
-				<a href="#core-contributors" id="core-contributors" style="color: inherit; text-decoration: none;">
-					<h2>Core Contributors</h2>
+				<p>Basic understanding about how to work with <code>es modules</code> and <code>commonjs</code> modules.</p>
+				<p>Basic knowledge about <code>npm link</code> use to work with this project locally without to install it on its consumers apps.</p>
+				<a href="#installing" id="installing" style="color: inherit; text-decoration: none;">
+					<h3>Installing</h3>
 				</a>
-				<ul>
-					<li>Raúl Rodríguez Proenza</li>
-				</ul>
-				<a href="#collaboration" id="collaboration" style="color: inherit; text-decoration: none;">
-					<h2>Collaboration</h2>
+				<p>Install the package into your project.</p>
+				<pre><code class="language-bash">npm install @rproenza/micro-frontend-events-portal</code></pre>
+				<a href="#how-to-use" id="how-to-use" style="color: inherit; text-decoration: none;">
+					<h3>How to use</h3>
+				</a>
+				<a href="#example-es-module" id="example-es-module" style="color: inherit; text-decoration: none;">
+					<h4>Example (es module)</h4>
+				</a>
+				<pre><code class="language-js"> <span class="hljs-keyword">import</span> { AppsPortal } <span class="hljs-keyword">from</span> <span class="hljs-string">'@rproenza/micro-frontend-events-portal'</span>;
+
+ <span class="hljs-comment">// Create portals controller</span>
+ <span class="hljs-keyword">const</span> appsPortal = <span class="hljs-keyword">new</span> AppsPortal();
+
+ <span class="hljs-comment">// Register app into the portals controller</span>
+ <span class="hljs-keyword">const</span> appAEventPortal = appsPortal.registerApp(registrationObjectAppA);
+ <span class="hljs-comment">// Subscribe app to events of interest</span>
+ appAEventPortal
+    .listenEvent(<span class="hljs-string">'EVENT_APP_B-ADDED-Bss'</span>) <span class="hljs-comment">// =&gt; appAEventPortal is now listening for 'EVENT_APP_B-ADDED-Bss' events</span>
+    .listenEvent(<span class="hljs-string">'EVENT_APP_B-DELETED-Bss'</span>); <span class="hljs-comment">// =&gt; appAEventPortal is now listening for 'EVENT_APP_B-DELETED-Bss' events</span>
+
+ <span class="hljs-comment">// Register app into the portals controller</span>
+ <span class="hljs-keyword">const</span> appBEventPortal = appsPortal.registerApp(registrationObjectAppB);
+ <span class="hljs-comment">// Subscribe app to events of interest</span>
+ appBEventPortal
+    .listenEvent(<span class="hljs-string">'EVENT_APP_A-ADDED-Ass'</span>) <span class="hljs-comment">// =&gt; appBEventPortal is now listening for 'EVENT_APP_A-ADDED-Ass' events</span>
+    .listenEvent(<span class="hljs-string">'EVENT_APP_A-DELETED-Ass'</span>); <span class="hljs-comment">// =&gt; appBEventPortal is now listening for 'EVENT_APP_A-DELETED-Ass' events</span>
+
+ <span class="hljs-comment">// Publishing apps events</span>
+ appAEventPortal.notifyEvent(<span class="hljs-string">'EVENT_APP_A-ADDED-Ass'</span>, eventPayload); <span class="hljs-comment">// =&gt; appBEventPortal is notified about the 'EVENT_APP_A-ADDED-Ass' event</span>
+ appBEventPortal.notifyEvent(<span class="hljs-string">'EVENT_APP_B-DELETED-Bss'</span>, eventPayload); <span class="hljs-comment">// =&gt; appAEventPortal is notified about the 'EVENT_APP_B-DELETED-Bss event</span>
+
+ <span class="hljs-keyword">const</span> appANotifiedLogs = appsPortal.logs.getAppNotifiedEvents(appAName);
+ <span class="hljs-comment">/**
+  * =&gt; appANotifiedLogs =
+  *         {
+  *            'EVENT_APP_B-DELETED-Bss': [{eventDetailObject}], // Events notified
+  *        }
+  */</span>
+ <span class="hljs-keyword">const</span> appBPublishedLogs = appsPortal.logs.getAppPublishedEvents(appBName);
+ <span class="hljs-comment">/**
+  * =&gt; appBPublishedLogs =
+  *         {
+  *            'EVENT_APP_A-ADDED-Ass': [{eventDetailObject}], // Events notified
+  *        }
+  */</span></code></pre>
+				<a href="#example-commonjs" id="example-commonjs" style="color: inherit; text-decoration: none;">
+					<h4>Example (commonjs)</h4>
+				</a>
+				<pre><code class="language-js"> <span class="hljs-keyword">var</span> AppsPortal = <span class="hljs-built_in">require</span>(<span class="hljs-string">'@rproenza/micro-frontend-events-portal'</span>).AppsPortal;
+
+ <span class="hljs-comment">// Create portals controller</span>
+ <span class="hljs-keyword">var</span> appsPortal = <span class="hljs-keyword">new</span> AppsPortal();
+
+ <span class="hljs-comment">// Register app into the portals controller</span>
+ <span class="hljs-keyword">var</span> appAEventPortal = appsPortal.registerApp(registrationObjectAppA);
+ <span class="hljs-comment">// Subscribe app to events of interest</span>
+ appAEventPortal
+    .listenEvent(<span class="hljs-string">'EVENT_APP_B-ADDED-Bss'</span>) <span class="hljs-comment">// =&gt; appAEventPortal is now listening for 'EVENT_APP_B-ADDED-Bss' events</span>
+    .listenEvent(<span class="hljs-string">'EVENT_APP_B-DELETED-Bss'</span>); <span class="hljs-comment">// =&gt; appAEventPortal is now listening for 'EVENT_APP_B-DELETED-Bss' events</span>
+
+ <span class="hljs-comment">// Register app into the portals controller</span>
+ <span class="hljs-keyword">var</span> appBEventPortal = appsPortal.registerApp(registrationObjectAppB);
+ <span class="hljs-comment">// Subscribe app to events of interest</span>
+ appBEventPortal
+    .listenEvent(<span class="hljs-string">'EVENT_APP_A-ADDED-Ass'</span>) <span class="hljs-comment">// =&gt; appBEventPortal is now listening for 'EVENT_APP_A-ADDED-Ass' events</span>
+    .listenEvent(<span class="hljs-string">'EVENT_APP_A-DELETED-Ass'</span>); <span class="hljs-comment">// =&gt; appBEventPortal is now listening for 'EVENT_APP_A-DELETED-Ass' events</span>
+
+ <span class="hljs-comment">// Publishing apps events</span>
+ appAEventPortal.notifyEvent(<span class="hljs-string">'EVENT_APP_A-ADDED-Ass'</span>, eventPayload); <span class="hljs-comment">// =&gt; appBEventPortal is notified about the 'EVENT_APP_A-ADDED-Ass' event</span>
+ appBEventPortal.notifyEvent(<span class="hljs-string">'EVENT_APP_B-DELETED-Bss'</span>, eventPayload); <span class="hljs-comment">// =&gt; appAEventPortal is notified about the 'EVENT_APP_B-DELETED-Bss event</span>
+
+ <span class="hljs-keyword">var</span> appANotifiedLogs = appsPortal.logs.getAppNotifiedEvents(appAName);
+ <span class="hljs-comment">/**
+  * =&gt; appANotifiedLogs =
+  *         {
+  *            'EVENT_APP_B-DELETED-Bss': [{eventDetailObject}], // Events notified
+  *        }
+  */</span>
+ <span class="hljs-keyword">var</span> appBPublishedLogs = appsPortal.logs.getAppPublishedEvents(appBName);
+ <span class="hljs-comment">/**
+  * =&gt; appBPublishedLogs =
+  *         {
+  *            'EVENT_APP_A-ADDED-Ass': [{eventDetailObject}], // Events notified
+  *        }
+  */</span></code></pre>
+				<a href="#collaboration-section" id="collaboration-section" style="color: inherit; text-decoration: none;">
+					<h2>Collaboration section</h2>
+				</a>
+				<a href="#contributing" id="contributing" style="color: inherit; text-decoration: none;">
+					<h2>Contributing</h2>
 				</a>
 				<ul>
 					<li>PRs require at least one reviewer&#39;s approval.</li>
-					<li>Ultimate responsibilty for merging PRs rests with submitter after receiving approval.  However, as a courtesy the reviewer
+					<li>PRs require all automated checks have passed.</li>
+					<li>Ultimate responsibility for merging PRs rests with submitter after receiving approval.  However, as a courtesy the reviewer
 					should merge the PR after reviewing and delete the branch.</li>
+				</ul>
+				<a href="#clone-project" id="clone-project" style="color: inherit; text-decoration: none;">
+					<h3>Clone project</h3>
+				</a>
+				<pre><code class="language-bash">git <span class="hljs-built_in">clone</span> https://github.com/rproenza86/micro-frontend-events-portal.git</code></pre>
+				<a href="#running-the-tests" id="running-the-tests" style="color: inherit; text-decoration: none;">
+					<h3>Running the tests</h3>
+				</a>
+				<blockquote>
+					<p>Lint and unit test the project</p>
+				</blockquote>
+				<pre><code class="language-bash">npm run <span class="hljs-built_in">test</span></code></pre>
+				<blockquote>
+					<p>Rebuild, run tests, then create and open the coverage report</p>
+				</blockquote>
+				<pre><code class="language-bash">npm run cov</code></pre>
+				<a href="#deployment" id="deployment" style="color: inherit; text-decoration: none;">
+					<h3>Deployment</h3>
+				</a>
+				<p>One-step: clean, build, test, publish docs, and prep a release</p>
+				<pre><code class="language-bash"><span class="hljs-comment"># Prepare a standard release:</span>
+npm run prepare-release</code></pre>
+				<p>This command runs the following tasks:</p>
+				<ul>
+					<li><code>reset</code>: cleans the repo by removing all untracked files and resetting <code>--hard</code> to the latest commit. (<strong>Note: this could be destructive.</strong>)</li>
+					<li><code>test</code>: build and fully test the project</li>
+					<li><code>docs:html</code>: generate the latest version of the documentation</li>
+					<li><code>docs:publish</code>: publish the documentation to GitHub Pages</li>
+					<li><code>version</code>: bump package.json version, update CHANGELOG.md, and git tag the release</li>
+				</ul>
+				<p>When the script finishes, it will log the final command needed to push the release commit to the repo and publish the package on the <code>npm</code> registry:</p>
+				<pre><code class="language-bash">git push --follow-tags origin master; npm publish</code></pre>
+				<p>Look over the release if you&#39;d like, then execute the command to publish everything.</p>
+				<p>You can also prepare a non-standard release:</p>
+				<pre><code class="language-bash"><span class="hljs-comment"># Or a non-standard release:</span>
+
+<span class="hljs-comment"># Reset the repo to the latest commit and build everything</span>
+npm run reset &amp;&amp; npm run <span class="hljs-built_in">test</span> &amp;&amp; npm run cov:check &amp;&amp; npm run doc:html
+
+<span class="hljs-comment"># Then version it with standard-version options. e.g.:</span>
+<span class="hljs-comment"># don't bump package.json version</span>
+npm run version -- --first-release</code></pre>
+				<a href="#built-with" id="built-with" style="color: inherit; text-decoration: none;">
+					<h2>Built With</h2>
+				</a>
+				<ul>
+					<li><a href="https://travis-ci.org/">Travis.ci</a> - CI/CD service. Testing, deployment and release</li>
+					<li><a href="https://codecov.io">Codecov</a> - Unit test Coverture, code review workflow and quality</li>
+					<li><a href="https://www.codefactor.io">CodeFactor</a> - Automated code quality review</li>
+					<li><a href="https://deepscan.io">DeepScan</a> -  Code review checks for runtime errors and quality issues</li>
+					<li><a href="https://codebeat.co">Codebeat</a> - Automated code review help you prioritize issues find refactoring opportunities and identify quick wins in your applications</li>
+					<li><a href="https://bettercodehub.com">BetterCodeHub</a> - Definition of Done for code quality</li>
+				</ul>
+				<a href="#versioning" id="versioning" style="color: inherit; text-decoration: none;">
+					<h2>Versioning</h2>
+				</a>
+				<p>This project is tooled for <a href="https://github.com/conventional-changelog/conventional-changelog">conventional changelog</a> to make managing releases easier. See the <a href="https://github.com/conventional-changelog/standard-version">standard-version</a> documentation for more information on the workflow, or <a href="CHANGELOG.md"><code>CHANGELOG.md</code></a> for an example.</p>
+				<a href="#authors" id="authors" style="color: inherit; text-decoration: none;">
+					<h2>Authors</h2>
+				</a>
+				<ul>
+					<li><strong>Raul R. Proenza</strong><ul>
+							<li><a href="https://github.com/rproenza86">Github</a></li>
+							<li><a href="https://raulproenza.page">RaulProenza.Page</a></li>
+							<li><a href="https://www.linkedin.com/in/raulproenza/">Linkedin.com</a></li>
+						</ul>
+					</li>
+				</ul>
+				<a href="#license" id="license" style="color: inherit; text-decoration: none;">
+					<h2>License</h2>
+				</a>
+				<p>This project is licensed under the MIT License - see the <a href="LICENSE">LICENSE</a> file for details</p>
+				<a href="#acknowledgments" id="acknowledgments" style="color: inherit; text-decoration: none;">
+					<h2>Acknowledgments</h2>
+				</a>
+				<ul>
+					<li>Inspired on <a href="https://single-spa.js.org">single-spa</a> communication solution.</li>
+					<li>At its core this application implements several Design Patterns and Principles such as:<ul>
+							<li>GoF Design Pattern<ul>
+									<li>Behavioral Patterns:<ul>
+											<li>Observer</li>
+											<li>Strategy</li>
+											<li>Chain of responsibility</li>
+											<li>Command</li>
+											<li>Mediator</li>
+											<li>Template</li>
+										</ul>
+									</li>
+									<li>Creational Patterns:<ul>
+											<li>Factory method</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>GRASP Design Principles<ul>
+									<li>Low coupling</li>
+									<li>Low Coupling</li>
+									<li>Controller</li>
+									<li>Polymorphism</li>
+									<li>Expert</li>
+									<li>Controlled variation</li>
+									<li>Creator</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>This project is the result of the learning lessons and acquired experiences from the <a href="https://github.com/rproenza86/events-distributor">event-distributor</a> project.</li>
 				</ul>
 			</div>
 		</div>
