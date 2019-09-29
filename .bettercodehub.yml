@@ -3,5 +3,5 @@ languages:
 - typescript
 - javascript
 exclude:
-- ./vscode/.*
-- ./src/cli/.*
+- .vscode/.*
+- /src/cli/.*
