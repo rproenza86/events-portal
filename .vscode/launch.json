@@ -8,7 +8,7 @@
       "cwd": "${workspaceFolder}/build",
       // Replace this with your project root. If there are multiple, you can
       // automatically run the currently visible file with: "program": ${file}"
-      "program": "${workspaceFolder}/src/cli/cli.ts",
+      "program": "${workspaceFolder}/src/runner/portal.ts",
       // "args": ["--no-install"],
       "outFiles": ["${workspaceFolder}/build/main/**/*.js"],
       "skipFiles": [
@@ -21,8 +21,7 @@
       "runtimeArgs": ["--nolazy"],
       "env": {
         "TYPESCRIPT_STARTER_REPO_URL": "${workspaceFolder}"
-      },
-      "console": "externalTerminal"
+      }
     },
     {
       "type": "node",
