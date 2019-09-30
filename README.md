@@ -44,7 +44,7 @@ Basic knowledge about `npm link` use to work with this project locally without t
 Install the package into your project.
 
 ```bash
-npm install @rproenza/micro-frontend-events-portal
+$ npm install @rproenza/micro-frontend-events-portal
 ```
 
 ### How to use
@@ -147,7 +147,9 @@ npm install @rproenza/micro-frontend-events-portal
 ### Clone project
 
 ```bash
-git clone https://github.com/rproenza86/micro-frontend-events-portal.git
+$ git clone https://github.com/rproenza86/micro-frontend-events-portal.git
+$ cd cov:check
+$ npm ci
 ```
 
 ### Running the tests
@@ -155,13 +157,13 @@ git clone https://github.com/rproenza86/micro-frontend-events-portal.git
 > Lint and unit test the project
 
 ```bash
-npm run test
+$ npm run test
 ```
 
 > Rebuild, run tests, then create and open the coverage report
 
 ```bash
-npm run cov
+$ npm run cov
 ```
 
 ### Deployment
@@ -170,7 +172,7 @@ One-step: clean, build, test, publish docs, and prep a release
 
 ```bash
 # Prepare a standard release:
-npm run prepare-release
+$ npm run prepare-release
 ```
 
 This command runs the following tasks:
@@ -184,7 +186,7 @@ This command runs the following tasks:
 When the script finishes, it will log the final command needed to push the release commit to the repo and publish the package on the `npm` registry:
 
 ```bash
-git push --follow-tags origin master; npm publish
+$ git push --follow-tags origin master; npm publish
 ```
 
 Look over the release if you'd like, then execute the command to publish everything.
@@ -195,11 +197,11 @@ You can also prepare a non-standard release:
 # Or a non-standard release:
 
 # Reset the repo to the latest commit and build everything
-npm run reset && npm run test && npm run cov:check && npm run doc:html
+$ npm run reset && npm run test && npm run cov:check && npm run doc:html
 
 # Then version it with standard-version options. e.g.:
 # don't bump package.json version
-npm run version -- --first-release
+$ npm run version -- --first-release
 ```
 
 <hr/>
