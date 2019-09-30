@@ -100,7 +100,7 @@
 					<h3>Installing</h3>
 				</a>
 				<p>Install the package into your project.</p>
-				<pre><code class="language-bash">npm install @rproenza/micro-frontend-events-portal</code></pre>
+				<pre><code class="language-bash">$ npm install @rproenza/micro-frontend-events-portal</code></pre>
 				<a href="#how-to-use" id="how-to-use" style="color: inherit; text-decoration: none;">
 					<h3>How to use</h3>
 				</a>
@@ -200,24 +200,26 @@
 				<a href="#clone-project" id="clone-project" style="color: inherit; text-decoration: none;">
 					<h3>Clone project</h3>
 				</a>
-				<pre><code class="language-bash">git <span class="hljs-built_in">clone</span> https://github.com/rproenza86/micro-frontend-events-portal.git</code></pre>
+				<pre><code class="language-bash">$ git <span class="hljs-built_in">clone</span> https://github.com/rproenza86/micro-frontend-events-portal.git
+$ <span class="hljs-built_in">cd</span> cov:check
+$ npm ci</code></pre>
 				<a href="#running-the-tests" id="running-the-tests" style="color: inherit; text-decoration: none;">
 					<h3>Running the tests</h3>
 				</a>
 				<blockquote>
 					<p>Lint and unit test the project</p>
 				</blockquote>
-				<pre><code class="language-bash">npm run <span class="hljs-built_in">test</span></code></pre>
+				<pre><code class="language-bash">$ npm run <span class="hljs-built_in">test</span></code></pre>
 				<blockquote>
 					<p>Rebuild, run tests, then create and open the coverage report</p>
 				</blockquote>
-				<pre><code class="language-bash">npm run cov</code></pre>
+				<pre><code class="language-bash">$ npm run cov</code></pre>
 				<a href="#deployment" id="deployment" style="color: inherit; text-decoration: none;">
 					<h3>Deployment</h3>
 				</a>
 				<p>One-step: clean, build, test, publish docs, and prep a release</p>
 				<pre><code class="language-bash"><span class="hljs-comment"># Prepare a standard release:</span>
-npm run prepare-release</code></pre>
+$ npm run prepare-release</code></pre>
 				<p>This command runs the following tasks:</p>
 				<ul>
 					<li><code>reset</code>: cleans the repo by removing all untracked files and resetting <code>--hard</code> to the latest commit. (<strong>Note: this could be destructive.</strong>)</li>
@@ -227,17 +229,17 @@ npm run prepare-release</code></pre>
 					<li><code>version</code>: bump package.json version, update CHANGELOG.md, and git tag the release</li>
 				</ul>
 				<p>When the script finishes, it will log the final command needed to push the release commit to the repo and publish the package on the <code>npm</code> registry:</p>
-				<pre><code class="language-bash">git push --follow-tags origin master; npm publish</code></pre>
+				<pre><code class="language-bash">$ git push --follow-tags origin master; npm publish</code></pre>
 				<p>Look over the release if you&#39;d like, then execute the command to publish everything.</p>
 				<p>You can also prepare a non-standard release:</p>
 				<pre><code class="language-bash"><span class="hljs-comment"># Or a non-standard release:</span>
 
 <span class="hljs-comment"># Reset the repo to the latest commit and build everything</span>
-npm run reset &amp;&amp; npm run <span class="hljs-built_in">test</span> &amp;&amp; npm run cov:check &amp;&amp; npm run doc:html
+$ npm run reset &amp;&amp; npm run <span class="hljs-built_in">test</span> &amp;&amp; npm run cov:check &amp;&amp; npm run doc:html
 
 <span class="hljs-comment"># Then version it with standard-version options. e.g.:</span>
 <span class="hljs-comment"># don't bump package.json version</span>
-npm run version -- --first-release</code></pre>
+$ npm run version -- --first-release</code></pre>
 				<hr/>
 				<a href="#built-with" id="built-with" style="color: inherit; text-decoration: none;">
 					<h2>Built With</h2>
@@ -365,6 +367,45 @@ npm run version -- --first-release</code></pre>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/eventfoundationconstructorparams.html" class="tsd-kind-icon">Event<wbr>Foundation<wbr>Constructor<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#appaeventportal" class="tsd-kind-icon">appAEvent<wbr>Portal</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#appaname" class="tsd-kind-icon">appAName</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#appanotifiedlogs" class="tsd-kind-icon">appANotified<wbr>Logs</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#appbeventportal" class="tsd-kind-icon">appBEvent<wbr>Portal</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#appbname" class="tsd-kind-icon">appBName</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#appbpublishedlogs" class="tsd-kind-icon">appBPublished<wbr>Logs</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#appsportal" class="tsd-kind-icon">apps<wbr>Portal</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#browserenv" class="tsd-kind-icon">browser<wbr>Env</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#dispatchedaction" class="tsd-kind-icon">dispatched<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="globals.html#eventparams" class="tsd-kind-icon">event<wbr>Params</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="globals.html#mockstore" class="tsd-kind-icon">mock<wbr>Store</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="globals.html#registrationobjectappa" class="tsd-kind-icon">registration<wbr>Object<wbr>AppA</a>
+					</li>
+					<li class=" tsd-kind-object-literal tsd-is-not-exported">
+						<a href="globals.html#registrationobjectappb" class="tsd-kind-icon">registration<wbr>Object<wbr>AppB</a>
 					</li>
 				</ul>
 			</nav>
